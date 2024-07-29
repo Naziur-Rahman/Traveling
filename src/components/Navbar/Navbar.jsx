@@ -63,7 +63,7 @@ const Navbar = () => {
                   <NavLink activeClassName="active" to="/Places" onClick={()=>window.scrollTo(0,0)}>Best Places</NavLink>
                 </li>
                 <li className='py-4'>
-                  <NavLink activeClassName="active" to="/About_Us" onClick={()=>window.scrollTo(0,0)}>About Us</NavLink>
+                  <NavLink activeClassName="active" to="/About" onClick={()=>window.scrollTo(0,0)}> About Us</NavLink>
                 </li>
 
                 {/* Dropdown section  */}

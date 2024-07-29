@@ -12,10 +12,12 @@ import {
 } from "react-router-dom";
 import Home from './Pages/Home';
 import Layout from './Pages/Layout';
+import ErrorPage from './ErrorPage';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout></Layout> ,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       { path: "/", element: <Home></Home> },
       { path: "/about", element: <About></About> },
