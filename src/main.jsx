@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom/client'
 import About from './Pages/About';
 import Blogs from './Pages/Blogs';
 import BlogsDetails from './Pages/BlogsDetails';
-
+import BestPlaces from './Pages/BestPlaces';
+import OurServices from './Pages/OurServices';
+import Location from './Pages/Location';
+import Contact from './Pages/Contact';
 
 import './index.css'
 import {
@@ -19,10 +22,13 @@ const router = createBrowserRouter([
     element: <Layout></Layout> ,
     errorElement: <ErrorPage></ErrorPage>,
     children: [
-      { path: "/", element: <Home></Home> },
-      { path: "/about", element: <About></About> },
-      { path: "/blogs", element: <Blogs></Blogs> },
-      { path: "/places", element: <BlogsDetails></BlogsDetails> },
+      {path: "/", element:<Home></Home>},
+      {path: "/blogs", element:<Blogs></Blogs>},
+      {path: "/places", element:<BestPlaces></BestPlaces>},
+      {path: "/about", element:<About></About>},
+      {path: "/services", element:<OurServices></OurServices>},
+      {path: "/location", element:<Location></Location>},
+      {path: "/contact", element:<Contact></Contact>},
       
     ],
   },

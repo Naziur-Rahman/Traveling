@@ -1,126 +1,81 @@
 
-import { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import LogoImg from "../../assets/logo.jpg";
-import { FaCaretDown } from "react-icons/fa";
-import { HiMenuAlt3 } from "react-icons/hi";
-import MenuResponsive from './MenuResponsive';
-
-
-
-const dropdownLinks = [
-    {
-      name: "Our Services",
-      link: "/#services",
-    },
-    {
-      name: "locations",
-      link: "/#locations",
-    },
-    {
-      name: "Contact Us",
-      link: "/#contact_Us",
-    }
-]
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-
-  const [showMenu, setShowMenu] = useState(false);
-  const toggleMenu = () => {
-    setShowMenu(!showMenu);
-  }
   return (
-    <>
-      <div className="fixed top-0 right-0 w-full bg-white text-black shadow-md">
-        <div className='bg-gradient-to-r from-primary to secondary'>
+    <div>
+      <div className='bg-gradient-to-r from-primary to secondary'>
           <div className="container py-[2px] sm:block hidden">
-            <div className="flex justify-between py-[2px] px-4">
-              <p className='text-white '>20% off on next booking</p>
+            <div className="flex justify-between py-[2px]">
+              <p>20% off on next booking</p>
               <p>Mobile No. +880 17195 0601</p>
             </div>
           </div>
         </div>
-        
-        <div className="container py-3 sm:py-0">
-          <div className="flex items-center justify-between">
-            {/* Logo Section */}
-            <div>
-              <Link to="/" onClick={()=>window.scrollTo(0,0)}>
-              <img src={LogoImg} alt="Logo" className="h-16 ml-4"/>
-
-              </Link>
+      <div className="navbar bg-base-100">
+        <div className="navbar-start">
+          <div className="dropdown">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
             </div>
-            {/* NavLink section */}
-            <div className='hidden md:block'>
-              <ul className='flex items-center gap-6'>
-                <li className='py-4'>
-                  <NavLink to="/"  activeClassName="active" onClick={()=>window.scrollTo(0,0)}>Home</NavLink>
-                </li>
-                <li className='py-4'>
-                  <NavLink activeClassName="active" to="/Blogs" onClick={()=>window.scrollTo(0,0)}>Blogs</NavLink>
-                </li>
-                <li className='py-4'>
-                  <NavLink activeClassName="active" to="/Places" onClick={()=>window.scrollTo(0,0)}>Best Places</NavLink>
-                </li>
-                <li className='py-4'>
-                  <NavLink activeClassName="active" to="/About" onClick={()=>window.scrollTo(0,0)}> About Us</NavLink>
-                </li>
-
-                {/* Dropdown section  */}
-                
-
-                 <li className='py-4 relative group cursor-pointer'>
-                    <div className='dropdown  flex items-center'>
-                      <span>Quick Links</span>
-                      <span>
-                      <FaCaretDown className='transition-all duration-200 group-hover:rotate-180'>
-                      </FaCaretDown>
-                      </span>
-                    </div>
-                    <div className='absolute -left-9 top[57px] z-[9999] hidden group-hover:block shadow-md text-black w-[150px] bg-white p-2'>
-                      <ul>
-                        {
-                          dropdownLinks.map((data)=>{
-                            return(
-                              <li key={data.name}>
-                              <Link to={data.link} className='inline-block w-full rounded-md p-2 hover:bg-primary'>
-                                {data.name}
-                              </Link>
-                            </li>
-                            );
-                            
-                          })
-                        }
-                      </ul>
-                    </div>
-                 </li>
-              </ul>
-            </div>
-            {/* Booking button  */}
-            <div className='flex items-center gap-4'>
-              <button className='bg-gradient-to-r from-primary to-secondary hover:bg-gradient-to-r hover:from-secondary hover:bg-primary transition-all duration-600 text-white px-3 py-1 rounded-full mx-2' >
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              <li><NavLink to={"/"}>Home</NavLink></li>
+              <li><NavLink to={"/blogs"}>Blogs</NavLink></li>
+              <li><NavLink to={"/places"}>Best Places</NavLink></li>
+              <li><NavLink to={"/about"}>About Us</NavLink></li>
+              <li>
+                <a>Quick Link</a>
+                <ul className="p-2">
+                  <li><NavLink to={"/services"}>Our_Services</NavLink></li>
+                  <li><NavLink to={"/location"}>Location</NavLink></li>
+                  <li><NavLink to={"/contact"}>Contact_Us</NavLink></li>
+                </ul>
+              </li>
+              
+            </ul>
+          </div>
+          <a className="btn btn-ghost text-xl"><img src="/src/assets/logo.jpg" alt="logo" className="h-[55px] w-[65px]"/></a>
+        </div>
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal px-1 gap-2">
+            <li><NavLink to={"/"}>Home</NavLink></li>
+            <li><NavLink to={"/blogs"}>Blogs</NavLink></li>
+            <li><NavLink to={"/places"}>Best Places</NavLink></li>
+            <li><NavLink to={"/about"}>About Us</NavLink></li>
+            <li>
+              <details>
+                <summary>Quick Link</summary>
+                <ul className="p-2">
+                  <li><NavLink to={"/services"}>Our_Services</NavLink></li>
+                  <li><NavLink to={"/location"}>Location</NavLink></li>
+                  <li><NavLink to={"/contact"}>Contact_Us</NavLink></li>
+                </ul>
+              </details>
+            </li>
+            
+          </ul>
+        </div>
+        <div className="navbar-end">
+        <button className='bg-gradient-to-r from-primary to-secondary hover:bg-gradient-to-r hover:from-secondary hover:bg-primary transition-all duration-600 text-white px-3 py-1 rounded-full mx-2' >
                 Book Now 
               </button>
-              {/* Mobile Hamburger Menu */}
-
-              <div className='md:hidden block'>
-                      {showMenu?(
-                        <HiMenuAlt3 
-                        onClick={toggleMenu} className="cursor-pointer transition-all" size={30}>
-                        </HiMenuAlt3>
-                       ):(
-                        <HiMenuAlt3 
-                        onClick={toggleMenu} className="cursor-pointer transition-all" size={30}>
-                        </HiMenuAlt3>
-                       )}
-              </div>
-            </div>
-          </div>
         </div>
-        <MenuResponsive setShowMenu={setShowMenu} showMenu={showMenu}></MenuResponsive>
       </div>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default Navbar
+export default Navbar;
