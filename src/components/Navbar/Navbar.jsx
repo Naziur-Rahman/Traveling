@@ -56,7 +56,7 @@ const Navbar = () => {
             <li><NavLink to={"/places"}>Best Places</NavLink></li>
             <li><NavLink to={"/about"}>About Us</NavLink></li>
             <li>
-              <details>
+              <details className="z-30 ">
                 <summary>Quick Link</summary>
                 <ul className="p-2">
                   <li><NavLink to={"/services"}>Our_Services</NavLink></li>
@@ -69,7 +69,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-        <button className='bg-gradient-to-r from-primary to-secondary hover:bg-gradient-to-r hover:from-secondary hover:bg-primary transition-all duration-600 text-white px-3 py-1 rounded-full mx-2' >
+          <button className='bg-gradient-to-r from-primary to-secondary hover:bg-gradient-to-r hover:from-secondary hover:bg-primary transition-all duration-600 text-white px-3 py-1 rounded-full mx-2' >
                 Book Now 
               </button>
         </div>
