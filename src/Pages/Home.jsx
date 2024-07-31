@@ -1,6 +1,6 @@
 import Hero from "../components/Hero/Hero";
 import videoBg from "../assets/video/water.mp4";
-
+import BestPlaces from "./BestPlaces";
 const Home = () => {
     return (
         <div>
@@ -11,6 +11,7 @@ const Home = () => {
                         <source src={videoBg} type="video/mp4"/>
                     </video>
                     <Hero></Hero>
+                    <BestPlaces></BestPlaces>
                 </div>
             </div>
           
