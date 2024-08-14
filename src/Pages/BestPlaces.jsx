@@ -9,6 +9,10 @@ import Img4 from "../assets/images/Img4.jpg";
 import Img5 from "../assets/images/Img5.jpg";
 import Img6 from "../assets/images/Img6.jpg";
 import Img7 from "../assets/images/Img7.jpeg";
+import Img8 from "../assets/images/Colosseum_ Italy.jpg";
+import Img9 from "../assets/images/Gardens_Singapore.jpg";
+import Img10 from "../assets/images/Kathmondu.jpeg";
+import Img11 from "../assets/images/Sikim-Lake.jpg";
 
 const placesData = [
     {
@@ -18,7 +22,7 @@ const placesData = [
         location: "Saudi Arabia",
         description: "Masjid al-Haram, the largest mosque in the world, surrounds the Kaaba in Mecca. It is the holiest site in Islam, where millions of Muslims perform Hajj and Umrah, making it central to Islamic worship and pilgrimage.",
         price: 2000,
-        type: "Beaches",
+        type: "Religious",
     },
     {
         id: 2,
@@ -36,7 +40,7 @@ const placesData = [
         location: "Bangladesh",
         description: "The Sundarbans, the world's largest mangrove forest, lies in Bangladesh and is renowned for its unique biodiversity, including Bengal tigers and diverse flora and fauna. It’s a UNESCO World Heritage site, crucial for conservation and ecological balance.",
         price: 2000,
-        type: "Beaches",
+        type: "Nature & Wildlife Areas",
     },
     {
         id: 4,
@@ -45,7 +49,7 @@ const placesData = [
         location: "Bangladesh",
         description: "Sajek Valley, nestled in the Chittagong Hill Tracts of Bangladesh, offers stunning panoramic views, lush green hills, and serene landscapes. Known as the 'Queen of Hills,' it’s a popular destination for nature lovers and adventure seekers.",
         price: 2000,
-        type: "Beaches",
+        type: "Mountains",
     },
     {
         id: 5,
@@ -80,6 +84,42 @@ const placesData = [
         title: "Dubai",
         location:  "United Arab Emirates",
         description: "Dubai is a dazzling city in the UAE known for its futuristic skyline, luxury shopping, and vibrant nightlife. Iconic landmarks like the Burj Khalifa and artificial islands showcase its blend of modernity and tradition.",
+        price: 2000,
+        type: "Beaches",
+    },
+    {
+        id: 9,
+        img: Img8,
+        title: "Colosseum",
+        location:  "Italy",
+        description: "The Colosseum, located in Rome, Italy, is an ancient amphitheater renowned for its gladiatorial contests and public spectacles. An iconic symbol of Roman engineering and history, it remains one of the most visited historical sites globally.",
+        price: 2000,
+        type: "Beaches",
+    },
+    {
+        id: 10,
+        img: Img9,
+        title: "Gardens by the Bay",
+        location:  "Singapore",
+        description: "Gardens by the Bay is a futuristic park in Singapore, renowned for its iconic Supertree Grove, Cloud Forest, and Flower Dome. It combines stunning horticultural displays with innovative architecture, offering a unique urban garden experience.",
+        price: 2000,
+        type: "Beaches",
+    },
+    {
+        id: 11,
+        img: Img10,
+        title: "Durbar Square",
+        location:  "Kathmandu, Nepal",
+        description: "Kathmandu Durbar Square is a historic plaza in Kathmandu, Nepal, featuring ancient palaces, temples, and courtyards. Known for its Newar architecture and cultural significance, it's a UNESCO World Heritage Site and a center of Nepalese heritage.",
+        price: 2000,
+        type: "Beaches",
+    },
+    {
+        id: 12,
+        img: Img11,
+        title: "Sikkim",
+        location:  "Northeast India",
+        description: "Sikkim is a northeastern Indian state known for its stunning landscapes, including Mount Kanchenjunga, vibrant Buddhist culture, and rich biodiversity. Its capital, Gangtok, offers scenic beauty and diverse ethnic communities.",
         price: 2000,
         type: "Beaches",
     },
